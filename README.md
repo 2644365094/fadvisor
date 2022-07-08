@@ -177,10 +177,14 @@ recording_rules.yml:
 
 ### 3. Import following grafana dashboards to your grafana
 And there are some available grafana dashboards for you if you has installed grafana already.
+Note that the data source should be modified to your own Prometheus uid.
 ```
-./deploy/helm/fadvisor/charts/grafana/dashboards/cluster-costs.json
-./deploy/helm/fadvisor/charts/grafana/dashboards/costs-dimension.json
-./deploy/helm/fadvisor/charts/grafana/dashboards/namespace-costs.json
+     cluster-costs:
+       url: https://raw.githubusercontent.com/gocrane/helm-charts/main/integration/grafana/dashboards/cluster-costs.json
+     costs-dimension:
+       url: https://raw.githubusercontent.com/gocrane/helm-charts/main/integration/grafana/dashboards/costs-dimension.json
+     namespace-costs:
+       url: https://raw.githubusercontent.com/gocrane/helm-charts/main/integration/grafana/dashboards/namespace-costs.json
 
 ```
 
